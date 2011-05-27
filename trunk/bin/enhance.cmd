@@ -1,0 +1,1 @@
+"%JAVA_HOME%\java" -cp C:\dev\googleappengine\appengine-java-sdk-1.3.0\lib\appengine-tools-api.jar;C:\dev\googleappengine\appengine-java-sdk-1.3.0\demos\guestbook\src\sched2\ com.google.appengine.tools.enhancer.Enhance C:\dev\googleappengine\appengine-java-sdk-1.3.0\demos\guestbook\src\sched2\data\model

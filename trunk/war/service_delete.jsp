@@ -1,0 +1,1 @@
+<%@ include file="/WEB-INF/pages/service_delete.jsp" %>
