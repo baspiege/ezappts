@@ -13,7 +13,7 @@
 
     boolean showAdd=false;
     boolean isAdmin=false;
-	  boolean isUserForStore=false;
+	boolean isUserForStore=false;
     User currentUser=RequestUtils.getCurrentUser(request);
     if (currentUser!=null)
     {
@@ -28,6 +28,7 @@
     }
 
 %>
+<div style="float:left;">
 <p>
 <%
     ResourceBundle bundle = ResourceBundle.getBundle("Text", SessionUtils.getLocale(request));
@@ -41,7 +42,7 @@
 
         // Schedule
         out.write("<a href=\"sched.jsp\">");
-        out.write("Sched");//bundle.getString("scheduleLabel"));
+        out.write(bundle.getString("scheduleLabel"));
         out.write("</a>");
 	}
     if (showAdd)
@@ -55,7 +56,7 @@
     {
         // Service
         out.write(" | <a href=\"service.jsp\">");
-        out.write("Srvc");//bundle.getString("servicesLabel"));
+        out.write(bundle.getString("servicesLabel"));
         out.write("</a>");
     }
 	if (isUserForStore)
@@ -64,7 +65,7 @@
 
 		//if (isAdmin)
 		//{
-			out.write("Usr");//bundle.getString("usersLabel"));
+			out.write(bundle.getString("usersLabel"));
 		//}
 		//else
 		//{
@@ -88,7 +89,10 @@
     }
 
 %>
-<a href="store.jsp">Str</a>
-
-<%-- <p><a href="lang.jsp?locale=<%= queryString %>"><%= bundle.getString("langLabel")%></a> | <a href="about.jsp">Abt</a></a> | <a href="help.jsp"><%= bundle.getString("helpLabel")%></a> | <a href="contactUs.jsp"><%= bundle.getString("contactUsLabel")%></a> | <a href="<%=userServiceNavLabel.createLogoutURL(RequestUtils.getLogonUri(request,true))%>"><%= bundle.getString("logOffLabel")%></a></p> --%>
-| <a href="about.jsp">Abt</a> | <a href="<%=userServiceNavLabel.createLogoutURL(RequestUtils.getLogonUri(request,true))%>"><%= bundle.getString("logOffLabel")%></a></p>
+<a href="store.jsp"><%= bundle.getString("storesLabel")%></a></p>
+</div>
+<div style="float:right;">
+<%-- <p><a href="lang.jsp?locale=<%= queryString %>"><%= bundle.getString("langLabel")%></a> | <a href="about.jsp"><%= bundle.getString("aboutLabel")%></a></a> | <a href="help.jsp"><%= bundle.getString("helpLabel")%></a> | <a href="contactUs.jsp"><%= bundle.getString("contactUsLabel")%></a> | <a href="<%=userServiceNavLabel.createLogoutURL(RequestUtils.getLogonUri(request,true))%>"><%= bundle.getString("logOffLabel")%></a></p> --%>
+<p><a href="about.jsp"><%= bundle.getString("aboutLabel")%></a></a> | <a href="<%=userServiceNavLabel.createLogoutURL(RequestUtils.getLogonUri(request,true))%>"><%= bundle.getString("logOffLabel")%></a></p>
+</div>
+<div style="clear:both;"/>

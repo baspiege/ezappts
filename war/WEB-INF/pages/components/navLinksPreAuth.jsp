@@ -19,7 +19,6 @@
     ResourceBundle bundle = ResourceBundle.getBundle("Text", SessionUtils.getLocale(request));
 %>
 <div style="float:right;">
-<%-- <p><a href="lang.jsp?locale=<%= queryString %>"><%= bundle.getString("langLabel")%></a> | <a href="about.jsp"><%= bundle.getString("aboutLabel")%></a> | <a href="help.jsp"><%= bundle.getString("helpLabel")%></a> | <a href="contactUs.jsp"><%= bundle.getString("contactUsLabel")%></a></p> --%>
 <p><a href="about.jsp"><%= bundle.getString("aboutLabel")%></a></a></p>
 </div>
 <div style="clear:both;"/>
