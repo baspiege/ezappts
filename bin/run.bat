@@ -1,0 +1,1 @@
+C:\dev\sched2\bin\dev_appserver.cmd C:\dev\sched2\war
